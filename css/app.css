@@ -1,12 +1,290 @@
-.flex {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
+    justify-content: center;
 }
 
-.flex-row {
+.principal {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+
+}
+
+.central {
+    background-color: #f8f8f8;
+    border-radius: 15px;
+}
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+
+}
+
+form input {
+    outline: unset;
+    padding: 20px;
+    min-width: 300px;
+    border: 1px solid aqua;
+    border-radius: 20px;
+
+}
+
+form input:focus,
+form text {
+    background-color: aquamarine;
+}
+
+.botaocalcular {
+    background-color: aqua;
+    cursor: pointer;
+    border: 1px solid aquamarine;
+}
+
+.botaoentenda {
+    cursor: pointer;
+    border: 1px solid aquamarine;
+}
+
+select option {
+    padding-right: 1em;
+    font-size: 15px;
+}
+
+.checkbox {
+    display: flex;
+    margin: 25px 10px 15px 10px;
+}
+
+.checkbox-style {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.logo-history {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+.principal-history {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+/* CSS DE FORA*/
+
+body {
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.h1 {
+    margin-block-start: 0.57em;
+    margin-block-end: 0;
+    text-align: center;
+}
+
+.principalContainer {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 9px;
+
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 10px 10px 15px #b5d8e3c9;
+}
+
+.horizontalDivisor {
+    width: 100%;
+    height: 1px;
+    align-self: center;
+    background-color: aqua;
+}
+
+.input {
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    border-width: 0.5px;
+    padding: 7px;
+}
+
+.btn {
+    text-align: center;
+    padding: 7px;
+    border-radius: 15px;
+}
+
+.btnPrimary {
+    border-color: #45FEFE;
+    background-color: #45FEFE;
+}
+
+.btnSecondary {
+    border-color: #45FEFE;
+    background-color: white;
+}
+
+.historyHeader {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.barraPesquisa {
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 1em;
+}
+
+.historyDiv {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.input-text {
+.historyDivHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.historyDivProfileImg {
+    width: 60px;
+    height: 60px;
     background-color: #F6F6F6;
-    border: 2px solid #BDBDBD;
+    border-radius: 5px;
+}
+
+.historyDivHeaderTextDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.historyDivTimer {
+    color: #522020;
+    font-size: 12px;
+    text-align: center;
+}
+
+.historyInfoText {
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.dateColor {
+    color: #BDBDBD;
+}
+
+@media only screen and (min-width: 360px) {
+
+    .principalContainerBigScreen {
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width: 359px) {
+    .h1Small {
+        font-size: 1.85em;
+    }
+
+    .principalContainerSmallScreen {
+        width: 200px;
+    }
+
+    .inputSmallScreenContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .h1Small {
+        font-size: 1.65em;
+    }
+
+    .principalContainerSmallScreen {
+        width: 180px;
+    }
+
+    .inputSmallScreenContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .historySmallScreenFontSite {
+        font-size: x-small;
+    }
+
+    .barraPesquisaSmall {
+        max-width: 175px;
+    }
+
+    .historyDivProfileImg {
+        width: 40px;
+        height: 40px;
+        background-color: #F6F6F6;
+        border-radius: 5px;
+    }
+}
+
+@media only screen and (max-width: 269px) {
+    .h1Small {
+        font-size: 1.45em;
+    }
+
+    .principalContainerSmallScreen {
+        width: 160px;
+    }
+
+    .inputSmallScreenContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 5px;
+        max-width: fit-content;
+    }
+
+    .inputTinyScreen {
+        max-width: 150px;
+        margin-left: 5px;
+    }
 }

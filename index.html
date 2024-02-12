@@ -9,18 +9,44 @@
 </head>
 
 <body>
-    <div>ITEM 1</div>
-    <div class="flex flex-column">
-        <div>ITEM 2.1</div>
-        <div>ITEM 2.2</div>
-        <div>ITEM 2.3</div>
-    </div>
     <div>
-        <input class="input" type="text" />
+        <h1 class="titulo">Calcúlo de IMC</h1>
     </div>
-    <div>ITEM 4</div>
-    <div>ITEM 5</div>
-    <div>ITEM 6</div>
+    <section class="principal">
+        <div class="central">
+            <form>
+                <div>
+                    <input placeholder="Digite sua altura" type="text" name="altura" class="validate" required>
+                </div>
+                <div>
+                    <input placeholder="Digite seu peso" type="text" name="peso" class="validate" required>
+                </div>
+                <div>
+                    <select class="genero" name="genero">
+                        <option value="">Selecione o sexo</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" class="checkbox-style" name="checkidade"><label for="checkidade">Eu tenho 65 anos ou
+                        mais</label>
+                </div>
+
+                <div>
+                    <input class="botaocalcular" type="submit" value="Calcúlar o meu IMC">
+                </div>
+            </form>
+
+            <form>
+                <div>
+                    <input class="botaoentenda" type="submit" value="Entenda o cálculo">
+                </div>
+            </form>
+
+        </div>
+    </section>
 </body>
 
 </html>
